@@ -1,9 +1,7 @@
 // app/components/ThemeToggle.tsx
 "use client";
-import IconSun from "../assets/icons/IconSun";
-import IconMoon from "../assets/icons/IconMoonStars";
+import Image from 'next/image'
 import { motion } from "framer-motion";
-
 import {useTheme} from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -31,7 +29,25 @@ export function ThemeToggle() {
       whileTap={{ scale: 0.9 }}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >
-        {theme === 'dark' ? <IconSun /> : <IconMoon />}
+        {theme === 'dark' ? 
+          <Image
+          src="/sun.svg"
+          alt="sun icon"
+          className="dark:invert mt-1"
+          width={24}
+          height={24}
+          priority
+          />
+          : 
+          <Image
+          src="/moon.svg"
+          alt="moon icon"
+          className="dark:invert mt-1"
+          width={24}
+          height={24}
+          priority
+          />
+          }
       </motion.button>
     </div>
   )

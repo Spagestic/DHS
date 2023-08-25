@@ -8,7 +8,8 @@ import {Card,
 export function CardBox({Title, Description, Page}: any) {
     return (
         <>
-        <Card className="m-3 p-3"
+        <Card 
+        className="m-3 p-3 max-xl:w-140"
         shadow="lg"
         isHoverable
         isPressable

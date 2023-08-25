@@ -6,7 +6,7 @@ export function WageInput({ label }: any) {
     return (
         <>
             <Input 
-            className='mt-1 p-1'
+            className='p-1'
             size='md'
             variant='underlined' // "flat", "bordered", "underlined", "faded"
             type="number"

@@ -3,6 +3,7 @@ import React from 'react'
 import { Input } from '@nextui-org/react'
 
 export function DateInput({ label }: any) {
+    const [value, setValue] = React.useState("");
     return (
         <>
             <Input
@@ -13,6 +14,8 @@ export function DateInput({ label }: any) {
             placeholder="Date"
             labelPlacement="outside"
             label={label}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
             />
         </>
     )
